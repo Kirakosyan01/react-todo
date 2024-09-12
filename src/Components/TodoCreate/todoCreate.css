@@ -1,0 +1,141 @@
+.container{
+    background-color: rgb(231, 54, 145);
+    padding: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.taskCreate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 5px 10px gray;
+}
+.inputPlace{
+    border: 1px solid rgb(211, 198, 204);
+    width: 550px;
+    margin-right: 20px;
+    height: 50px;
+    border-radius: 3px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.buttonPlace{
+    border: 1px solid rgb(231, 54, 145);
+    padding: 15px 19px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(231, 54, 145);
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 4px 10px 8px gray;
+    }
+    &:active{
+        transform: scale(1) translateY(0);
+        box-shadow: none;
+    }
+}
+h2{
+    color: rgb(80, 74, 77);
+}
+.taskCreate{
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+    position: fixed;
+    top: 0;
+}
+.todoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+}
+.TodoCreate{
+    position: relative;
+    padding-bottom: 100px;
+}
+.todoElement{
+    max-width: 700px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    border: 1px solid rgb(221, 216, 219);
+    animation: fade-in 0.6s ease-in-out;
+}
+.deleteBtn{
+    border: 1px solid #000;
+    background-color: pink;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 4px 7px gray;
+        background-color: rgb(230, 57, 57);
+        color: white;
+    }
+    &:active{
+        transform: scale(1) translateY(0);
+        box-shadow: none;
+    }
+}
+.text{
+    text-align: left;
+    max-width: 550px;
+    font-weight: 500;
+    font-size: 17px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.buttons{
+    display: flex;
+    column-gap: 8px;
+}
+.editBtn{
+    border: 1px solid #000;
+    background-color: pink;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 4px 7px gray;
+        background-color: rgb(188, 247, 218);
+    }
+    &:active{
+        transform: scale(1) translateY(0);
+        box-shadow: none;
+    }
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateX(600px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
