@@ -4,14 +4,18 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
-.taskCreate{
+.pDark{
+    color: #C8C8C6;
+}
+.containerDark{
+    background-color: #F6C76C;
+    padding: 65px;
+    width: 100%;
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    margin-top: 40px;
-    box-shadow: 0 5px 10px gray;
+    justify-content: center;
+    position: relative;
 }
 .inputPlace{
     border: 1px solid rgb(211, 198, 204);
@@ -44,8 +48,31 @@
         box-shadow: none;
     }
 }
+.buttonPlaceDark{
+    border: 1px solid #F6C76C;
+    user-select: none;
+    padding: 15px 19px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 3px;
+    color: #252525;
+    background-color: #F6C76C;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 4px 10px 8px gray;
+    }
+    &:active{
+        transform: scale(1) translateY(0);
+        box-shadow: none;
+    }
+}
 h2{
     color: rgb(80, 74, 77);
+}
+.h2Dark{
+    color: white;
 }
 .taskCreate{
     padding: 30px;
@@ -54,6 +81,25 @@ h2{
     flex-direction: column;
     align-items: flex-start;
     width: 700px;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 10px gray;
+    position: fixed;
+    top: 0;
+}
+
+.taskCreateDark{
+    padding: 30px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 10px gray;
     position: fixed;
     top: 0;
 }
@@ -67,8 +113,16 @@ h2{
 .TodoCreate{
     position: relative;
     padding-bottom: 100px;
+    min-height: 100vh;
+}
+.TodoCreateDark{
+    background-color: #131313;
+    position: relative;
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 .todoElement{
+    margin-top: 10px;
     max-width: 700px;
     width: 100%;
     align-items: center;
@@ -79,9 +133,22 @@ h2{
     border: 1px solid rgb(221, 216, 219);
     animation: fade-in 0.6s ease-in-out;
 }
+.todoElementDark{
+    margin-top: 10px;
+    max-width: 700px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #252525;
+    display: flex;
+    border: 1px solid #252525;
+    animation: fade-in 0.6s ease-in-out;
+}
 .text{
     text-align: left;
-    max-width: 550px;
+    max-width: 450px;
     width: 100%;
     font-weight: 500;
     font-size: 17px;
@@ -100,3 +167,12 @@ h2{
         transform: translateX(0);
     }
 }
+.brightness{
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.1) translate(-10px, 10px);
+    }
+}
+

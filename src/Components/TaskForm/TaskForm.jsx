@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './taskForm.css';
 
-function TaskForm({tasks, setTasks, task, setEditId, editValue, setEditValue}) {
+function TaskForm({tasks, setTasks, task, setEditId, editValue, setEditValue, isDarkMode}) {
 
     function handleSave(taskId) {
         const updatedTasks = tasks.map(task =>
@@ -27,8 +27,8 @@ function TaskForm({tasks, setTasks, task, setEditId, editValue, setEditValue}) {
                                     value={editValue}
                                     onChange={handleEditChange}
                                 />
-                                <button className='saveBtn' type="submit">Save</button>
-                                <button className='cancelBtn' type="button" onClick={handleCancel}>Cancel</button>
+                                <button className={isDarkMode ? 'saveBtnDark' : 'saveBtn'} type="submit">Save</button>
+                                <button className={isDarkMode ? 'cancelBtnDark' : 'cancelBtn'} type="button" onClick={handleCancel}>Cancel</button>
                             </form>
     )
 }

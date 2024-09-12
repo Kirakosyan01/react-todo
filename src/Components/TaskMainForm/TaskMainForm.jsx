@@ -1,5 +1,5 @@
 import './taskMainForm.css';
-function TaskMainForm({task, tasks, setEditValue, setEditId, setTasks}){
+function TaskMainForm({task, tasks, setEditValue, setEditId, setTasks, isDarkMode}){
 
     function handleEdit(taskId) {
         const taskToEdit = tasks.find((task) => task.id === taskId);
@@ -19,22 +19,23 @@ function TaskMainForm({task, tasks, setEditValue, setEditId, setTasks}){
 
     return (
         <>
+        <p className={isDarkMode ? 'pDark' : null} style={{fontSize:'11px',width:'50px', marginBottom:'19px',}}>{task.time}</p>
         <p
           onClick={() => handleIsCompleted(task.id)}
-          className={`text ${task.isCompleted ? "completed" : ""}`}
+          className={`text ${isDarkMode ? 'pDark' : null} ${task.isCompleted ? "completed" : ""}`}
         >
           {task.text}
         </p>
         <div className="buttons">
           <button
             onClick={() => handleDeleteTask(task.id)}
-            className="deleteBtn"
+            className={isDarkMode ? 'deleteBtnDark' : 'deleteBtn'}
           >
             Delete
           </button>
           <button
             onClick={() => handleEdit(task.id)}
-            className="editBtn"
+            className={isDarkMode ? 'editBtnDark' : 'editBtn'}
           >
             Edit
           </button>
